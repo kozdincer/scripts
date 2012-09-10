@@ -90,6 +90,8 @@ class Translation:
 		self.words = []
 		self.types = ""
 	
-	def unicode(self):
-		return "a"	
+	def getWords(self):
+		return ", ".join(self.words)
 
+	def getTypes(self):
+		return self.types
