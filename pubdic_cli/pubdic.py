@@ -93,7 +93,3 @@ class Translation:
 	def unicode(self):
 		return "a"	
 
-
-
-my = PubDic("hello")
-print my.word
