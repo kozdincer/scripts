@@ -16,7 +16,7 @@ if len(sys.argv) > 1:
     method = sys.argv[1]
 
 if method not in ('--offline', '--online'):
-    print 'Use either with --offline or --online'
+    print '[pidgin_status] Use either with --offline or --online'
     sys.exit(0)
 
 # Check what to do
@@ -25,13 +25,13 @@ if method == '--offline':
     offlineStatus = purple.PurpleSavedstatusNew("", STATUS_OFFLINE)
     purple.PurpleSavedstatusActivate(offlineStatus)
 
-    print 'Gone offline'
+    print '[pidgin_status] Gone offline'
 else:
     try:
         # Create online status and activate it
 	onlineStatus = purple.PurpleSavedstatusNew("", STATUS_ONLINE)
         purple.PurpleSavedstatusActivate(onlineStatus)
 
-        print 'Status online'
+        print '[pidgin_status] Status online'
     except:
-        print 'Could not online status'
+        print '[pidgin_status] Could not online status'
